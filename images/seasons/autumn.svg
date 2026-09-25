@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <radialGradient id="bgParchmentAutumn" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="65%" stop-color="#fbf8f2"/>
+      <stop offset="100%" stop-color="#f2e8d8"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgParchmentAutumn)"/>
+  <rect x="18" y="18" width="564" height="364" fill="none" stroke="#331d10" stroke-width="1.4" opacity="0.5"/>
+  <rect x="25" y="25" width="550" height="350" fill="none" stroke="#b85428" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+  
+  <g transform="translate(300, 155)">
+    <g transform="rotate(-25) translate(-40, -10)">
+      <rect x="0" y="0" width="100" height="14" rx="4" fill="#5c2409" stroke="#331d10" stroke-width="1.5"/>
+      <rect x="5" y="8" width="90" height="14" rx="4" fill="#853812" stroke="#331d10" stroke-width="1.5"/>
+    </g>
+    <path d="M 15 -45 L 30 -25 L 55 -30 L 40 -10 L 60 5 L 30 15 L 35 45 L 15 30 L 0 50 L -10 30 L -30 40 L -25 10 L -50 0 L -35 -15 L -45 -35 L -20 -25 Z" fill="#c95a28" stroke="#331d10" stroke-width="1.5"/>
+    <ellipse cx="-45" cy="15" rx="26" ry="24" fill="#a82218" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M -45 -9 Q -46 -18 -42 -22" stroke="#4a2910" stroke-width="2" fill="none"/>
+  </g>
+
+  <text x="300" y="290" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="700" fill="#331d10" text-anchor="middle" letter-spacing="3">AUTOMNE • AUTUMN</text>
+  <text x="300" y="318" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#b85428" text-anchor="middle" letter-spacing="3.5">CANNELLE DE CEYLAN • POMMES TARTES • BRIOCHES</text>
+  <line x1="220" y1="334" x2="380" y2="334" stroke="#331d10" stroke-width="0.8" opacity="0.6"/>
+</svg>

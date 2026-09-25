@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details — Crumble Chords Bakery</title>
+  <meta name="description" content="Classic bakery recipe with precise measurements, step-by-step instructions, and baker's tips from Crumble Chords.">
+  
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="icon" href="images/logo/crumble-chords-emblem.png" type="image/png">
+</head>
+<body>
+
+  <!-- Optional Background Audio Element -->
+  <audio id="bakeryAudio" src="audio/bakery-classic.mp3" preload="none"></audio>
+
+  <!-- ============================================================ -->
+  <!-- SITE WRAPPER (Warm Peach Journal Canvas inside Brown Frame)  -->
+  <!-- ============================================================ -->
+  <div class="site-wrapper">
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION BAR                                               -->
+  <!-- ============================================================ -->
+  <header class="site-header" id="header">
+    <div class="container nav-inner">
+      <div class="brand-area">
+        <a href="index.html" class="brand-link" aria-label="Crumble Chords Home">
+          <img 
+            src="images/logo/crumble-chords-main-logo.png" 
+            alt="Crumble Chords Bakery" 
+            class="site-logo-img"
+            width="210"
+            height="44"
+          >
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="recipes.html" class="nav-link active">Recipes</a>
+        <a href="seasons.html" class="nav-link">Seasons</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-right-actions">
+        <button class="music-toggle-btn" aria-label="Toggle classic bakery music" aria-pressed="false">
+          <svg class="music-icon-svg" viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span class="music-btn-text">Music: Play</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="recipes.html" class="mobile-nav-link active">Recipes</a>
+      <a href="seasons.html" class="mobile-nav-link">Seasons</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN RECIPE DETAIL CONTENT CONTAINER                         -->
+  <!-- ============================================================ -->
+  <main id="recipeDetailContainer">
+    <!-- Recipe Detail Header -->
+    <header class="recipe-detail-header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="recipe-breadcrumbs" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="recipes.html">Recipes</a>
+          <span>/</span>
+          <span id="breadcrumbRecipeTitle">Loading Recipe...</span>
+        </nav>
+
+        <!-- Category & Season Pills -->
+        <div class="recipe-header-badges">
+          <a href="recipes.html" class="recipe-category-pill" id="recipeCategoryBadge">Bakery</a>
+          <span class="recipe-season-pill" id="recipeSeasonBadge">All Seasons</span>
+        </div>
+
+        <h1 class="recipe-detail-title" id="recipeTitle">Loading Bakery Recipe...</h1>
+        <p class="recipe-detail-summary" id="recipeSummary"></p>
+
+        <!-- Recipe Timing & Servings Meta Strip -->
+        <div class="recipe-meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">Prep Time</span>
+            <span class="meta-val" id="recipePrepTime">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Bake Time</span>
+            <span class="meta-val" id="recipeBakeTime">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Yield</span>
+            <span class="meta-val" id="recipeServings">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Level</span>
+            <span class="meta-val" id="recipeDifficulty">—</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content: Ingredients, Photo & Instructions -->
+    <section class="recipe-main-content">
+      <div class="container">
+        <div class="recipe-grid-layout">
+          
+          <!-- LEFT COLUMN: Featured Photograph & Ingredients List -->
+          <div class="recipe-left-col">
+            <!-- Photograph -->
+            <div class="recipe-photo-container">
+              <img 
+                id="recipeImage" 
+                src="images/placeholders/recipe-placeholder.svg" 
+                alt="Bakery recipe photograph"
+                class="recipe-photo-large"
+              >
+            </div>
+
+            <!-- Ingredients Card -->
+            <div class="recipe-ingredients-block">
+              <h2 class="ingredients-title">Ingredients</h2>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+                Check off ingredients as you prepare your mise en place:
+              </p>
+              <ul class="ingredients-list" id="recipeIngredientsList">
+                <!-- Dynamically populated via js/recipe-details.js -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Narrative Description, Instructions, Tips & Comments -->
+          <div class="recipe-right-col">
+            <!-- Narrative Description -->
+            <div style="margin-bottom: var(--space-2xl);">
+              <h2 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 12px;">About This Bake</h2>
+              <p id="recipeDescription" style="font-size: 1.05rem; line-height: 1.75;"></p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="recipe-instructions-block">
+              <h2 class="instructions-title">Step-by-Step Instructions</h2>
+              <ol class="instructions-list" id="recipeInstructionsList">
+                <!-- Dynamically populated via js/recipe-details.js -->
+              </ol>
+            </div>
+
+            <!-- Baker's Tips Box -->
+            <div class="bakers-tips-box">
+              <h3 class="bakers-tips-title">Baker's Note</h3>
+              <p class="bakers-tips-text" id="recipeTipsText"></p>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- COMMENTS SECTION                                       -->
+            <!-- ====================================================== -->
+            <section class="comments-section" id="commentsSection">
+              <div class="comments-header-row">
+                <h2 class="comments-title">Baker's Notes &amp; Comments</h2>
+                <span class="comments-count-label" id="commentCount">(0)</span>
+              </div>
+
+              <!-- Comment Submission Form -->
+              <div class="comment-form-wrap">
+                <h3 style="font-size: 1.15rem; color: var(--color-amber-light); margin-bottom: 14px;">Leave a Comment</h3>
+                
+                <div class="comment-success-notice" id="commentSuccessNotice">
+                  Your comment has been posted successfully!
+                </div>
+
+                <form id="commentForm">
+                  <div class="form-group">
+                    <label for="commentName" class="form-label">Your Name</label>
+                    <input 
+                      type="text" 
+                      id="commentName" 
+                      class="form-input" 
+                      placeholder="e.g. Clara Henderson" 
+                      required
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="commentText" class="form-label">Comment</label>
+                    <textarea 
+                      id="commentText" 
+                      class="form-textarea" 
+                      placeholder="Share your baking notes, substitutions, or feedback..." 
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+                </form>
+              </div>
+
+              <!-- Comments List -->
+              <div class="comments-list" id="commentsList">
+                <!-- Dynamically populated via js/recipe-details.js -->
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-emblem-row">
+            <img src="images/logo/crumble-chords-emblem.png" alt="Crumble Chords Emblem" class="footer-emblem-img" width="54" height="54">
+            <h3 class="footer-brand-title">Crumble Chords</h3>
+          </div>
+          <p class="footer-tagline">
+            Classic bakery recipes made for every season. Timeless techniques, natural pantry staples, and dependable measurements.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="recipes.html" class="footer-link">All Recipes</a>
+            <a href="seasons.html" class="footer-link">Seasons</a>
+            <a href="about.html" class="footer-link">About Crumble Chords</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Bakery Categories</h4>
+            <a href="recipes.html?category=Cakes" class="footer-link">Cakes &amp; Cupcakes</a>
+            <a href="recipes.html?category=Cookies" class="footer-link">Bakery Cookies</a>
+            <a href="recipes.html?category=Pastries" class="footer-link">Pastries &amp; Rolls</a>
+            <a href="recipes.html?category=Pies" class="footer-link">Tarts &amp; Pies</a>
+            <a href="recipes.html?category=Breads" class="footer-link">Sweet Breads</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Seasons</h4>
+            <a href="seasons.html?season=spring" class="footer-link">Spring</a>
+            <a href="seasons.html?season=summer" class="footer-link">Summer</a>
+            <a href="seasons.html?season=autumn" class="footer-link">Autumn</a>
+            <a href="seasons.html?season=winter" class="footer-link">Winter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Crumble Chords. Classic bakery recipes made for every season.</p>
+      </div>
+    </div>
+  </footer>
+  </div> <!-- End .site-wrapper -->
+
+  <!-- Scripts -->
+  <script src="js/recipes-data.js"></script>
+  <script src="js/audio-player.js"></script>
+  <script src="js/recipe-details.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

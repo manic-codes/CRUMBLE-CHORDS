@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgParchment" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#fbf8f2"/>
+      <stop offset="100%" stop-color="#f2e8d8"/>
+    </radialGradient>
+    <linearGradient id="warmGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d48b38"/>
+      <stop offset="100%" stop-color="#a65e1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgParchment)"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#331d10" stroke-width="1.5" opacity="0.6"/>
+  <rect x="32" y="32" width="736" height="536" fill="none" stroke="#b85428" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.5"/>
+
+  <g transform="translate(400, 270)">
+    <ellipse cx="0" cy="110" rx="160" ry="20" fill="#331d10" opacity="0.08"/>
+    <ellipse cx="0" cy="105" rx="170" ry="12" fill="none" stroke="#331d10" stroke-width="2.5"/>
+    <path d="M -150 100 Q 0 -60 150 100 Z" fill="#ffffff" stroke="#331d10" stroke-width="2.5"/>
+    <circle cx="0" cy="-62" r="14" fill="url(#warmGold)" stroke="#331d10" stroke-width="2"/>
+    <path d="M -40 30 Q 0 10 40 30" stroke="#b85428" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <text x="400" y="460" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="600" fill="#331d10" text-anchor="middle" letter-spacing="2">CRUMBLE CHORDS</text>
+  <text x="400" y="490" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#b85428" text-anchor="middle" letter-spacing="4">CLASSIC BAKERY RECIPE</text>
+</svg>

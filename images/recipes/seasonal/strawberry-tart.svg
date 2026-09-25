@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <radialGradient id="bgParchmentTart" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="65%" stop-color="#fbf8f2"/>
+      <stop offset="100%" stop-color="#f2e8d8"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgParchmentTart)"/>
+  <rect x="18" y="18" width="564" height="414" fill="none" stroke="#331d10" stroke-width="1.4" opacity="0.5"/>
+  <rect x="25" y="25" width="550" height="400" fill="none" stroke="#b85428" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+
+  <ellipse cx="300" cy="365" rx="200" ry="30" fill="#331d10" opacity="0.08"/>
+
+  <g transform="translate(300, 260)">
+    <ellipse cx="0" cy="30" rx="180" ry="60" fill="#c99147" stroke="#331d10" stroke-width="2"/>
+    <ellipse cx="0" cy="15" rx="170" ry="55" fill="#fff5d6" stroke="#a66720" stroke-width="1.5"/>
+    <path d="M -90 10 L -60 -15 L -35 15 Z" fill="#d92929" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M -45 5 L -15 -25 L 15 5 Z" fill="#eb3b3b" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M 10 10 L 40 -20 L 70 10 Z" fill="#d92929" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M 65 15 L 95 -10 L 120 15 Z" fill="#eb3b3b" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M -70 30 L -40 5 L -15 35 Z" fill="#c21f1f" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M -20 35 L 10 5 L 40 35 Z" fill="#d92929" stroke="#331d10" stroke-width="1.5"/>
+    <path d="M 30 35 L 60 5 L 90 35 Z" fill="#c21f1f" stroke="#331d10" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-15" rx="10" ry="5" fill="#438a2e" transform="rotate(-30 0 -15)"/>
+    <ellipse cx="12" cy="-12" rx="10" ry="5" fill="#5ca844" transform="rotate(30 12 -12)"/>
+  </g>
+
+  <rect x="170" y="38" width="260" height="32" rx="16" fill="#ffffff" stroke="#331d10" stroke-width="1.2"/>
+  <text x="300" y="59" font-family="'Playfair Display', Georgia, serif" font-size="13" font-weight="600" fill="#331d10" text-anchor="middle" letter-spacing="2">TARTELETTE AUX FRAISES DES BOIS</text>
+</svg>

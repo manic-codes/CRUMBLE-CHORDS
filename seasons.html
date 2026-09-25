@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Season — Crumble Chords</title>
+  <meta name="description" content="Discover classic bakery recipes harmonized with the four seasons: fresh berry tarts in spring and summer, to spiced apple pies and warm chocolate cakes in autumn and winter.">
+  
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="icon" href="images/logo/crumble-chords-emblem.png" type="image/png">
+</head>
+<body>
+
+  <!-- Optional Background Audio Element -->
+  <audio id="bakeryAudio" src="audio/bakery-classic.mp3" preload="none"></audio>
+
+  <!-- ============================================================ -->
+  <!-- SITE WRAPPER (Warm Peach Journal Canvas inside Brown Frame)  -->
+  <!-- ============================================================ -->
+  <div class="site-wrapper">
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION BAR                                               -->
+  <!-- ============================================================ -->
+  <header class="site-header" id="header">
+    <div class="container nav-inner">
+      <div class="brand-area">
+        <a href="index.html" class="brand-link" aria-label="Crumble Chords Home">
+          <img 
+            src="images/logo/crumble-chords-main-logo.png" 
+            alt="Crumble Chords Bakery" 
+            class="site-logo-img"
+            width="210"
+            height="44"
+          >
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="seasons.html" class="nav-link active">Seasons</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-right-actions">
+        <button class="music-toggle-btn" aria-label="Toggle classic bakery music" aria-pressed="false">
+          <svg class="music-icon-svg" viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span class="music-btn-text">Music: Play</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="recipes.html" class="mobile-nav-link">Recipes</a>
+      <a href="seasons.html" class="mobile-nav-link active">Seasons</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT                                                 -->
+  <!-- ============================================================ -->
+  <main>
+    <!-- Page Intro -->
+    <header class="page-intro">
+      <div class="container">
+        <p class="page-eyebrow">The Seasonal Oven</p>
+        <h1 class="page-title">Choose Your Season &bull; Find Your Perfect Recipe</h1>
+        <p class="page-subtitle">
+          Baking shifts with the rhythms of the year. Select your current season below to discover bakery recipes matched to seasonal fruits, warming spices, and weather.
+        </p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <!-- Four Season Selector Tabs -->
+        <div class="season-selector-container" role="tablist" aria-label="Choose your season">
+          <button class="season-tab-btn active" data-season="spring" role="tab" aria-selected="true">
+            <span class="season-tab-name">Spring</span>
+            <span class="season-tab-desc">Citrus &amp; Vanilla</span>
+          </button>
+          <button class="season-tab-btn" data-season="summer" role="tab" aria-selected="false">
+            <span class="season-tab-name">Summer</span>
+            <span class="season-tab-desc">Berries &amp; Tarts</span>
+          </button>
+          <button class="season-tab-btn" data-season="autumn" role="tab" aria-selected="false">
+            <span class="season-tab-name">Autumn</span>
+            <span class="season-tab-desc">Spice &amp; Orchard Apples</span>
+          </button>
+          <button class="season-tab-btn" data-season="winter" role="tab" aria-selected="false">
+            <span class="season-tab-name">Winter</span>
+            <span class="season-tab-desc">Cocoa &amp; Molasses</span>
+          </button>
+        </div>
+
+        <!-- Editorial Season Narrative Banner -->
+        <div class="season-editorial-banner">
+          <div class="season-banner-content">
+            <span class="season-banner-eyebrow">Baking Philosophy</span>
+            <h2 class="season-banner-title" id="seasonBannerTitle">Spring Bakery Collection</h2>
+            <p class="season-banner-tagline" id="seasonBannerTagline">Bright citrus, delicate floral infusions, and tender vanilla sponges.</p>
+            <p class="season-banner-notes" id="seasonBannerNotes">
+              Spring invites fresh tart lemon drizzles, delicate elderflower, wild vanilla pods, and sweet berries awakening after winter's frost.
+            </p>
+          </div>
+          <div class="season-banner-image-wrap">
+            <img 
+              src="images/seasons/spring.svg" 
+              alt="Season illustration" 
+              class="season-banner-image"
+              id="seasonBannerImage"
+            >
+          </div>
+        </div>
+
+        <!-- Seasonal Recipe Cards Grid (Dynamic via js/main.js) -->
+        <div class="recipes-grid" id="seasonalRecipesGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-emblem-row">
+            <img src="images/logo/crumble-chords-emblem.png" alt="Crumble Chords Emblem" class="footer-emblem-img" width="54" height="54">
+            <h3 class="footer-brand-title">Crumble Chords</h3>
+          </div>
+          <p class="footer-tagline">
+            Classic bakery recipes made for every season. Timeless techniques, natural pantry staples, and dependable measurements.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="recipes.html" class="footer-link">All Recipes</a>
+            <a href="seasons.html" class="footer-link">Seasons</a>
+            <a href="about.html" class="footer-link">About Crumble Chords</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Bakery Categories</h4>
+            <a href="recipes.html?category=Cakes" class="footer-link">Cakes &amp; Cupcakes</a>
+            <a href="recipes.html?category=Cookies" class="footer-link">Bakery Cookies</a>
+            <a href="recipes.html?category=Pastries" class="footer-link">Pastries &amp; Rolls</a>
+            <a href="recipes.html?category=Pies" class="footer-link">Tarts &amp; Pies</a>
+            <a href="recipes.html?category=Breads" class="footer-link">Sweet Breads</a>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Seasons</h4>
+            <a href="seasons.html?season=spring" class="footer-link">Spring</a>
+            <a href="seasons.html?season=summer" class="footer-link">Summer</a>
+            <a href="seasons.html?season=autumn" class="footer-link">Autumn</a>
+            <a href="seasons.html?season=winter" class="footer-link">Winter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Crumble Chords. Classic bakery recipes made for every season.</p>
+      </div>
+    </div>
+  </footer>
+  </div> <!-- End .site-wrapper -->
+
+  <!-- Scripts -->
+  <script src="js/recipes-data.js"></script>
+  <script src="js/audio-player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <radialGradient id="bgParchmentWinter" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="65%" stop-color="#fbf8f2"/>
+      <stop offset="100%" stop-color="#f2e8d8"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgParchmentWinter)"/>
+  <rect x="18" y="18" width="564" height="364" fill="none" stroke="#331d10" stroke-width="1.4" opacity="0.5"/>
+  <rect x="25" y="25" width="550" height="350" fill="none" stroke="#b85428" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+  
+  <g transform="translate(300, 155)">
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#331d10" stroke-width="1" stroke-dasharray="3 5" opacity="0.4"/>
+    <g transform="translate(-40, 10)">
+      <circle cx="0" cy="0" r="10" fill="#42200e" stroke="#331d10" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-22" rx="6" ry="12" fill="#5c2e14" stroke="#331d10" stroke-width="1.2"/>
+      <ellipse cx="21" cy="-7" rx="6" ry="12" transform="rotate(72 21 -7)" fill="#5c2e14" stroke="#331d10" stroke-width="1.2"/>
+      <ellipse cx="13" cy="18" rx="6" ry="12" transform="rotate(144 13 18)" fill="#5c2e14" stroke="#331d10" stroke-width="1.2"/>
+      <ellipse cx="-13" cy="18" rx="6" ry="12" transform="rotate(216 -13 18)" fill="#5c2e14" stroke="#331d10" stroke-width="1.2"/>
+      <ellipse cx="-21" cy="-7" rx="6" ry="12" transform="rotate(288 -21 -7)" fill="#5c2e14" stroke="#331d10" stroke-width="1.2"/>
+    </g>
+
+    <g transform="translate(35, 15)">
+      <ellipse cx="0" cy="35" rx="35" ry="8" fill="#331d10" opacity="0.1"/>
+      <rect x="-24" y="-10" width="48" height="42" rx="6" fill="#ffffff" stroke="#331d10" stroke-width="2"/>
+      <ellipse cx="0" cy="-10" rx="24" ry="7" fill="#331d10"/>
+      <path d="M -8 -18 Q -14 -30 -6 -40" stroke="#b85428" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M 8 -18 Q 2 -30 10 -40" stroke="#b85428" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <text x="300" y="290" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="700" fill="#331d10" text-anchor="middle" letter-spacing="3">HIVER • WINTER</text>
+  <text x="300" y="318" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#b85428" text-anchor="middle" letter-spacing="3.5">CHOCOLAT CHAUD • ÉPICES DOUCES • PAIN D'ÉPICES</text>
+  <line x1="220" y1="334" x2="380" y2="334" stroke="#331d10" stroke-width="0.8" opacity="0.6"/>
+</svg>
